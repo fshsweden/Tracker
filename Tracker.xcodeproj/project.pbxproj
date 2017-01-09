@@ -13,6 +13,8 @@
 		168526141D93D9CF00F9BF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168526121D93D9CF00F9BF56 /* Main.storyboard */; };
 		168526161D93D9CF00F9BF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168526151D93D9CF00F9BF56 /* Assets.xcassets */; };
 		168526191D93D9CF00F9BF56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168526171D93D9CF00F9BF56 /* LaunchScreen.storyboard */; };
+		168526221D93D9E100F9BF56 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168526211D93D9E100F9BF56 /* MapKit.framework */; };
+		AB28E326D8D9077B4B46F6C3 /* Pods_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3778F64B8254AC7B0483F1A7 /* Pods_Tracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		168526151D93D9CF00F9BF56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		168526181D93D9CF00F9BF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1685261A1D93D9CF00F9BF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		168526211D93D9E100F9BF56 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3778F64B8254AC7B0483F1A7 /* Pods_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C9E5EF5EB4D44B3B7B66D5 /* Pods-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracker/Pods-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		B767F8F7F31380517B283069 /* Pods-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracker/Pods-Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168526221D93D9E100F9BF56 /* MapKit.framework in Frameworks */,
+				AB28E326D8D9077B4B46F6C3 /* Pods_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,8 @@
 			children = (
 				1685260B1D93D9CF00F9BF56 /* Tracker */,
 				1685260A1D93D9CF00F9BF56 /* Products */,
+				168526201D93D9E100F9BF56 /* Frameworks */,
+				2B73E24F829FF2F8CD99C0F3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +77,24 @@
 			path = Tracker;
 			sourceTree = "<group>";
 		};
+		168526201D93D9E100F9BF56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				168526211D93D9E100F9BF56 /* MapKit.framework */,
+				3778F64B8254AC7B0483F1A7 /* Pods_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B73E24F829FF2F8CD99C0F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76C9E5EF5EB4D44B3B7B66D5 /* Pods-Tracker.debug.xcconfig */,
+				B767F8F7F31380517B283069 /* Pods-Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1685261D1D93D9CF00F9BF56 /* Build configuration list for PBXNativeTarget "Tracker" */;
 			buildPhases = (
+				F2D3F347C0D156033E1664EB /* [CP] Check Pods Manifest.lock */,
 				168526051D93D9CE00F9BF56 /* Sources */,
 				168526061D93D9CE00F9BF56 /* Frameworks */,
 				168526071D93D9CE00F9BF56 /* Resources */,
+				24A9891E5595A26922381F58 /* [CP] Embed Pods Frameworks */,
+				F1B9FC2A9CFB4A2D6C7C6BC4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -101,6 +132,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9UN5M89MCE;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -134,6 +173,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24A9891E5595A26922381F58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tracker/Pods-Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1B9FC2A9CFB4A2D6C7C6BC4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tracker/Pods-Tracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D3F347C0D156033E1664EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		168526051D93D9CE00F9BF56 /* Sources */ = {
@@ -214,6 +301,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -256,6 +344,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -263,6 +352,7 @@
 		};
 		1685261E1D93D9CF00F9BF56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C9E5EF5EB4D44B3B7B66D5 /* Pods-Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9UN5M89MCE;
@@ -270,12 +360,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.fshweden.Tracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		1685261F1D93D9CF00F9BF56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B767F8F7F31380517B283069 /* Pods-Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9UN5M89MCE;
@@ -283,7 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.fshweden.Tracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -306,6 +397,7 @@
 				1685261F1D93D9CF00F9BF56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
